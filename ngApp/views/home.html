@@ -1,0 +1,17 @@
+
+<h2>Home</h2>
+<form>
+    <label>Car Search</label>
+    <input type="text", ng-model="controller.carSearch" />
+    <select name="carMakes" id="makes"
+    ng-change="controller.getCarsForMake(make.name)"
+    ng-model="controller.selectedMake" 
+    ng-options="make.name for make in controller.makes">
+    <!--{{make.name}}-->
+    </select>
+</form>
+<h2>Cars</h2>
+<ul>
+    <li ng-repeat="car in controller.cars">{{car.ShortDescription}}</li>
+</ul>
+
